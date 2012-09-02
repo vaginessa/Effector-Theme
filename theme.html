@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lte-ie8"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7 lte-ie8"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8 lte-ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>{Title}{block:TagPage} &bull; Posts Tagged &lsquo;{Tag}&rsquo;{/block:TagPage}{block:PostSummary} &bull; {PostSummary}{/block:PostSummary}</title>
+    {block:Description}
+    <meta name="description" content="{MetaDescription}"/>
+    {/block:Description}
+
+    <!--
+    Version: 1.2.6
+    Effector Theme
+    Tumblr: http://tumblr.com/themes/by/pixelunion
+    Website: http://www.pixelunion.net
+    Support: support@pixelunion.net
+
+    This theme is a custom version of Effector Theme by Pixel Union. More info here:
+    https://github.com/imanoleizaguirre/Effector-Theme
+    ==================================================================================
+    -->
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300italic' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="apple-touch-icon" href="{PortraitURL-128}" />
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+    <link rel="stylesheet" href="http://static.tumblr.com/xgwqnql/szhlc012n/reset.css" media="screen"/>
+    <link rel="stylesheet" href="http://static.tumblr.com/f6quix5/fiem9qlaw/site.css" media="screen"/>
+</head>
+<body class="content-700 invert scale-images">
+    <div id="header" class="pinned">
+        <div class="inner">
+            <div id="search">
+                <form id="search-form" method="get" action="/search">
+                    <span class="left"></span>
+                    <input type="text" name="q" value="Search" />
+                    <span class="right"></span>
+                </form>
+            </div>
+
+        </div><!-- .inner -->
+        <div class="shadow"><span></span></div>
+    </div><!-- /#header -->
+
+    <!-- PAGE -->
+    <div id="page" class="right-sidebar">
+        <div class="banner textual">
+            <h1 class="blog-title"><a href="/">{Title}</a></h1>
+        </div>
+        <div id="content">
+
+            {block:TagPage}
+                <div id="" class="overthetop">Posts tagged "{Tag}"</div>
+            {/block:TagPage}
+
+            <!-- BEGIN POSTS -->
+            {block:Posts}
+                {block:Text}
+                <div id="post-{postID}" class="post type-text{block:Tags} tag_{URLSafeTag}{/block:Tags}">
+                    <div class="post-panel">
+                        <div class="copy">
+                            {block:Title}
+                            <h2 class="post-title">{Title}</h2>
+                            {/block:Title}
+                            {Body}
+                        </div>
+                {/block:Text}
+
+                {block:Photo}
+                <div id="post-{postID}" class="post type-photo{block:Tags} tag_{URLSafeTag}{/block:Tags}">
+                    <div class="post-panel">
+                        <div class="media">
+                            <div class="photo-panel">
+
+
+                                    {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
+
+
+                                <div class="photo-btns">{block:HighRes}<a class="lightbox" href="{PhotoURL-HighRes}">Pop-up</a>{/block:HighRes}<a class="photo-url" href="{PhotoURL-HighRes}">View Separately</a></div>
+
+                            </div>
+                        </div>
+                        {block:Caption}
+                        <div class="copy">
+                            {Caption}
+                        </div>
+                        {/block:Caption}
+                {/block:Photo}
+
+                {block:Photoset}
+                <div id="post-{PostID}" class="post type-photoset{block:Tags} tag_{URLSafeTag}{/block:Tags}">
+                    <div class="post-panel">
+                        <div class="media loading">
+                            {Photoset-700}
+                        </div>
+                        {block:Caption}
+                        <div class="copy">
+                            {Caption}
+                        </div>
+                        {/block:Caption}
+                {/block:Photoset}
+
+                {block:Quote}
+                <div id="post-{PostID}" class="post type-quote{block:Tags} tag_{URLSafeTag}{/block:Tags}">
+                    <div class="colored-panel">
+                        <blockquote class="quote-text">{Quote}</blockquote>
+                    </div>
+                    <div class="post-panel">
+                        <div class="quote-nipple"></div>
+                        {block:Source}
+                        <div class="copy">
+                            {Source}
+                        </div>
+                        {/block:Source}
+                {/block:Quote}
+
+                {block:Link}
+                <div id="post-{PostID}" class="post type-link{block:Tags} tag_{URLSafeTag}{/block:Tags}">
+                    <div class="post-panel">
+                        <div class="copy">
+                            <h2 class="post-title"><a href="{URL}" {Target}>{Name}<span class="icon"></span></a></h2>
+                            {block:Description}
+                                {Description}
+                            {/block:Description}
+                        </div>
+                {/block:Link}
+
+                {block:Chat}
+                <div id="post-{PostID}" class="post type-chat{block:Tags} tag_{URLSafeTag}{/block:Tags}">
+                    <div class="post-panel">
+                        <div class="copy">
+                            {block:Title}
+                            <h2 class="post-title">{Title}</h2>
+                            {/block:Title}
+                            <ul class="chat">
+                                {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                    <span class="speaker">{Label}</span>
+                                    {/block:Label}
+                                    <span class="says">{Line}</span>
+                                </li>
+                                {/block:Lines}
+                            </ul>
+                        </div>
+                {/block:Chat}
+
+                {block:Video}
+                <div id="post-{PostID}" class="post type-video{block:Tags} tag_{URLSafeTag}{/block:Tags}">
+                    <div class="post-panel">
+                        <div class="media loading">
+                            {Video-700}
+                            {block:IndexPage}<div class="js-string hidden">{JSVideo-700}</div>{/block:IndexPage}
+                        </div>
+                        <div class="copy">
+                            {block:Caption}
+                                {Caption}
+                            {/block:Caption}
+                        </div>
+                {/block:Video}
+
+                {block:Audio}
+                <div id="post-{PostID}" class="post type-audio{block:Tags} tag_{URLSafeTag}{/block:Tags}">
+                    <div class="colored-panel">
+                        <div class="player-container">
+                            <div class="album-case"></div>
+                            <div class="album-art">{block:AlbumArt}<img class="album-art" src="{AlbumArtUrl}" alt=""/>{/block:AlbumArt}</div>
+                            <div class="corners"><span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span></div>
+                            <div class="player-btn">{AudioPlayerWhite}</div>
+                            {block:IndexPage}<div class="js-string hidden">{JSAudioPlayerWhite}</div>{/block:IndexPage}
+                        </div>
+                        <ul class="audio-meta">
+                            <li class="plays"><span class="count">{FormattedPlayCount}</span> {lang:Plays}</li>
+                            <li class="track-info">{block:TrackName}<span class="title">{TrackName}</span>{/block:TrackName}{block:Artist}<span class="artist">{Artist}</span>{/block:Artist}</li>
+                        </ul>
+                        {block:ExternalAudio}
+                        <a class="download" href="{ExternalAudioURL}" title="Download External Audio">Download External Audio</a>
+                        {/block:ExternalAudio}
+                    </div>
+                    <div class="post-panel">
+                        {block:Caption}
+                        <div class="copy">
+                            {Caption}
+                        </div>
+                        {/block:Caption}
+                {/block:Audio}
+
+                {block:Answer}
+                <div id="post-{PostID}" class="post type-answer">
+                    <div class="colored-panel">
+                        <h2 class="user-question"><span>Q:</span>{Question}</h2>
+                    </div>
+                    <div class="post-panel">
+                        <div class="quote-nipple"></div>
+                        <div class="copy">
+                            <div class="question-asker">
+                                <img src="{AskerPortraitURL-24}" width="24" height="24" alt=""/> {Asker}
+                            </div>
+                            <div class="answer">
+                                {Answer}
+                            </div>
+                        </div>
+                {/block:Answer}
+
+                        {block:ContentSource}
+                        <div class="copy source">
+                            <p>{lang:Source}: <a href="{SourceURL}">{SourceTitle}</a></p>
+                        </div>
+                        {/block:ContentSource}
+                        {block:Date}
+                        <div class="meta">
+                            <ul class="meta-list">
+                                {block:HasTags}
+                                <li class="tags">
+                                    <ul class="tag-list">
+                                        {block:Tags}
+                                        <li><a href="{TagURL}">#{Tag}</a></li>
+                                        {/block:Tags}
+                                    </ul>
+                                </li>
+                                {/block:HasTags}
+                                <li class="date{block:RebloggedFrom}-reblogged{/block:RebloggedFrom}"><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}"><span class="icon"></span>{TimeAgo}</a>{block:RebloggedFrom} <em>></em> <a class="reblogged-from" href="{ReblogRootURL}" title="{ReblogRootTitle}">{ReblogRootName}</a>{/block:RebloggedFrom}</li>
+                                {block:NoteCount}<li class="notes"><a href="{Permalink}#notes"><span class="icon"></span>{NoteCount}</a></li>{/block:NoteCount}
+                                <li class="permalink"><a href="{Permalink}"><span class="icon"></span>{lang:Permalink}</a></li>
+
+                            </ul><!--/.meta-list -->
+                        </div><!-- /.meta -->
+                        {/block:Date}
+
+                        {block:PermalinkPage}
+                        {block:NoteCount}
+                        <div id="notes">
+                            <h2>{NoteCount} Notes</h2>
+                            {PostNotes}
+                        </div><!-- /.notes -->
+                        {/block:NoteCount}
+                        {/block:PermalinkPage}
+
+                    </div><!-- /.post-panel -->
+                    <div class="post-shadow"></div>
+                </div><!-- /.post -->
+            {/block:Posts}
+            <!-- END POSTS -->
+
+            {block:NoSearchResults}
+                <div class="post type-text not-found">
+                    <div class="post-panel">
+                        <div class="copy">
+                            <h2 class="post-title">{lang:Sorry no posts found}</h2>
+                            <p>{lang:No search results for SearchQuery 2}</p>
+                        </div>
+                    </div>
+                    <div class="post-shadow"></div>
+                </div>
+            {/block:NoSearchResults}
+
+            {block:Pagination}
+            <div id="pagination">
+                <div class="nextprev">
+                    {block:PreviousPage}<a class="prev" href="{PreviousPage}">{/block:PreviousPage}<span>&larr; {lang:Newer}</span>{block:PreviousPage}</a>{/block:PreviousPage} <span class="sep">&bull;</span>
+                    {block:NextPage}<a class="next" href="{NextPage}">{/block:NextPage}<span>{lang:Older} &rarr;</span>{block:NextPage}</a>{/block:NextPage}
+                </div>
+                <div class="current-page">{lang:Page CurrentPage of TotalPages 2}</div>
+            </div><!--/#pagination -->
+            {/block:Pagination}
+            {block:PermalinkPagination}
+            <div id="pagination">
+                <div class="nextprev">
+                    {block:NextPost}<a class="prev" href="{NextPost}">{/block:NextPost}<span>&larr; {lang:Previous}</span>{block:NextPost}</a>{/block:NextPost} <span class="sep">&bull;</span>
+                    {block:PreviousPost}<a class="next" href="{PreviousPost}">{/block:PreviousPost}<span>{lang:Next} &rarr;</span>{block:PreviousPost}</a>{/block:PreviousPost}
+                </div>
+            </div><!--/#pagination -->
+            {/block:PermalinkPagination}
+
+        </div><!-- /#content -->
+
+        <!-- FOOTER -->
+        <div id="footer">
+            <div id="footer-end" class="ruled-top">
+                <ul id="footer-links">
+                    <li><a href="/rss">{lang:RSS}</a></li>
+                    <li><a href="/random">{lang:Random}</a></li>
+                    <li><a href="/archive">{lang:Archive}</a></li>
+                    <li><a href="/ask">{AskLabel}</a></li>
+                    <li><a href="http://twitter.com/xalernita">Twitter</a></li>
+                    <li><a href="/mobile">{lang:Mobile}</a></li>
+                </ul>
+                <p class="credits">
+                    &copy; 2012–2013 <a href="http://imanol.me">imanol.me</a> &#8212;
+                    <a href="http://www.tumblr.com/theme/17403">Effector Theme</a> by <a href="http://www.pixelunion.net">Pixel Union</a>.
+                </p>
+            
+            </div><!-- /#footer-end -->
+        </div><!-- /#footer -->
+    </div><!-- /#page -->
+
+<!-- Footer Scripts -->
+
+{block:IfGoogleAnalyticsWebPropertyID}
+<!-- GOOGLE ANALYTICS  CODE-->
+{/block:IfGoogleAnalyticsWebPropertyID}
+
+</body>
+</html>
