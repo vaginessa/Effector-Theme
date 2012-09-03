@@ -1,7 +1,7 @@
 Effector-Theme
 ===============
 
-Custom version of `Effector Theme <http://effectortheme.tumblr.com>`_ for Tumblr by `Pixel Union <http://www.pixelunion.net>`_.
+Custom version of `Effector Theme <http://effectortheme.tumblr.com>`_ for Tumblr by `Pixel Union <http://www.pixelunion.net>`_. You can watch it in action `here <http://my.imanol.me>`_.
 
 .. image:: https://raw.github.com/imanoleizaguirre/Effector-Theme/master/screen.png
 
