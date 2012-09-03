@@ -5,6 +5,8 @@ Custom version of `Effector Theme <http://effectortheme.tumblr.com>`_ for Tumblr
 
 .. image:: https://raw.github.com/imanoleizaguirre/Effector-Theme/master/screen.png
 
-Notice that the Twitter link is pointing to my onw Twitter account, so remember to update the information.
+You can find more cool background images in `Subtle Patterns <http://http://subtlepatterns.com>`_
+
+Remember to replace (or remove) the Google Analytics code and Twitter link with your information.
 
 This theme is still in development, but feel free to make any changes :-)

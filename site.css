@@ -134,7 +134,7 @@ ol.notes li blockquote a { color: #74787A }
 .copy img[align=left] { margin: 0 20px 20px 0 }
 .copy img[align=right] { margin: 0 0 20px 20px }
 .copy a { border-bottom: 1px solid #2c2c2c; margin-top: -1px; padding: 1px 0; }
-.copy a:hover, ol.notes a:hover, #disqus a:hover { color: #131313 }
+.copy a:hover, ol.notes a:hover{ color: #fefefe }
 .copy ol { list-style-type: decimal; list-style-position: inside; }
 .copy ol { margin-left: 20px; list-style-position: outside; }
 .copy ol li, .copy ul li { padding: 1px }
@@ -353,7 +353,7 @@ ol.notes li blockquote a { color: #74787A }
 
 /* (Previously) Configurable CSS params 
 -------------------------------------------------------------- */
-body { font-family:Helvetica Neue, Arial, sans-serif; color:#8e8f96; background-color:#464850; background-image: url("http://subtlepatterns.com/patterns/black_linen_v2.png")}
+body { font-family:Helvetica Neue, Arial, sans-serif; color:#8e8f96; background-color:#464850; background-image: url("http://static.tumblr.com/f6quix5/rFfm9shca/black_linen_v2.png")}
 .copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6, .auto-headings .copy p:first-child strong:first-child, #notes h2, .speaker {font-family:Helvetica Neue, Arial, sans-serif;}
 .pinned .menu a { color:#fff; color:rgba(255,255,255,0.8); }
 .pinned .blog-title a, .pinned .menu a:hover, .pinned .pages a, .banner .blog-title a, #footer h2, #footer-end a, .more-likes, .like_link a, #pagination .nextprev a, .page-sep { color: #fff; }
