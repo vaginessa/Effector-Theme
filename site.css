@@ -362,10 +362,11 @@ a, #footer-end a:hover { color:#f55b2c; }
 a:hover { color:#ffffff; }
 /* Inside Link Color */
 .copy a, .copy li:before, .type-chat .speaker, #notes-toggle:hover, ol.notes a, #disqus a { color:#f55b2c; }
-.copy a:hover, ol.notes a:hover { border-color:#f55b2c; }
+.copy a:hover { border-color:#f55b2c; }
+ol.notes a:hover { border-color:#2c2c2c; }
 #notes-toggle:hover .icon, .photo-btns a:hover { background-color:#f55b2c; }
 /* Colored Area */
-.colored-panel, .colored-panel a, .colored-panel a:hover, .colored-panel .user-question, .pages a:hover, .invert-topbar .fixed .pages a:hover, .invert #sidebar .pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover { color:#fffadc; }
+.colored-panel, .colored-panel a, .colored-panel a:hover, .colored-panel .user-question, .pages a:hover, .invert-topbar .fixed .pages a:hover, .invert #sidebar .pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover { color:white; }
 /* Colored Area Text Shadow */
 .type-quote .quote-text,.type-audio .audio-meta,.type-answer .user-question,.pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover { text-shadow:1px 1px #bf4402; }
 ol.notes li.tumblelog_imanol-sandbox { background-color:#fbfbfb; }
