@@ -14,7 +14,7 @@ a:hover, a:active { outline: none }
 /* Headings */
 h1, h2, h3, h4, h5, h6, .auto-headings .copy p:first-child strong:first-child { color: #424242; font-weight: bold; line-height: 1.2; }
 h1 { font-size: 24px }
-h2 { font-size: 18px }
+h2 { font-size: 18px; }
 /* Basic Elements*/
 p { margin-bottom: 15px }
 em { font-style: italic }
@@ -90,7 +90,7 @@ html[xmlns] .clearfix { display: block }
 -------------------------------------------------------------- */
 /* Notes */
 #notes { clear: both; border-top: 1px dashed #2c2c2c; padding: 25px 30px 10px 30px; }
-#notes h2 { font-size: 20px; display: inline-block; padding-bottom: 20px; }
+#notes h2 { font-size: 24px; display: inline-block; padding-bottom: 20px; }
 #notes h2 .sep { color: #E0E2E1; font-size: 28px; font-weight: bold; line-height: 1; padding: 0 4px 0 10px; }
 ol.notes { padding-bottom: 20px }
 ol.notes a { border-bottom: 1px solid #2c2c2c; margin-top: -1px; padding: 1px 0; }

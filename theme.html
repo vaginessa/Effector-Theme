@@ -10,6 +10,7 @@
     {block:Description}
     <meta name="description" content="{MetaDescription}"/>
     {/block:Description}
+    <meta name="image:Background" content=""/>
 
     <!--
     Version: 1.2.6
@@ -23,13 +24,20 @@
     ==================================================================================
     -->
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300italic,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300italic,300' rel='stylesheet' type='text/css'>
 
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="apple-touch-icon" href="{PortraitURL-128}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}"/>
     <link rel="stylesheet" href="http://static.tumblr.com/xgwqnql/szhlc012n/reset.css" media="screen"/>
     <link rel="stylesheet" href="http://static.tumblr.com/f6quix5/V2tmh6xtm/site.css" media="screen"/>
+
+    <style type="text/css">
+        {block:IfBackgroundImage}
+        body { background-image:url({image:Background});}
+        {/block:IfBackgroundImage} 
+    </style>
+
 </head>
 <body class="content-700 invert scale-images">
 
